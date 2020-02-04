@@ -37,6 +37,8 @@ class VideosController < ApplicationController
     end
   end
 
+
+
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
