@@ -7,12 +7,13 @@ class VideoUploader < CarrierWave::Uploader::Base
 
   process encode_video: [:mp4, resolution: "640x480"]
 
+# JAY - changed .avi from .mp4 to ensure file types are all avi so aviglich can glitch them
   def full_filename(for_file)
-    super.chomp(File.extname(super)) + '.mp4'
+    super.chomp(File.extname(super)) + '.avi'
   end
 
   def filename
-    original_filename.chomp(File.extname(original_filename)) + '.mp4'
+    original_filename.chomp(File.extname(original_filename)) + '.avi'
   end
   # Choose what kind of storage to use for this uploader:
   storage :file
