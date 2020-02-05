@@ -21,7 +21,9 @@ class VideosController < ApplicationController
 
   # GET /videos/1/edit
   def edit
-        @url = @video.file.url
+        # @url = "~/Desktop/carrier-wave-video-uploader/public" + @video.file.url
+        # @url = "/Users/Guest/Desktop/carrier-wave-video-uploader/public" + @video.file.url
+                @url = @video.file.url
         @video.glitchify(@url)
   end
 
@@ -40,8 +42,6 @@ class VideosController < ApplicationController
       end
     end
   end
-
-
 
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
