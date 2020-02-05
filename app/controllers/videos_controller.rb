@@ -10,6 +10,8 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+      # @url = url_for(@video.file)
+      @url = @video.file.url
   end
 
   # GET /videos/new
@@ -19,6 +21,8 @@ class VideosController < ApplicationController
 
   # GET /videos/1/edit
   def edit
+        @url = @video.file.url
+        @video.glitchify(@url)
   end
 
   # POST /videos
